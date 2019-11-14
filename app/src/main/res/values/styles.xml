@@ -1,0 +1,127 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:textViewStyle">@style/TextView.Bold</item>
+    <item name="actionBarTheme">@style/Toolbar.Standard</item>
+  </style>
+
+  <!-- AppTheme without action bar -->
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+  <style name="AppTheme.Reports" parent="AppTheme.NoActionBar">
+    <item name="android:textViewStyle">@style/TextView.Standard</item>
+  </style>
+
+  <style name="AppTheme.DefaultTextStyle" parent="AppTheme">
+    <item name="android:textViewStyle">@android:style/TextAppearance</item>
+  </style>
+
+  <style name="AppTheme.StandardTextStyle">
+    <item name="android:textViewStyle">@style/TextView.Standard</item>
+  </style>
+
+  <!-- Toolbar font -->
+  <style name="Toolbar.Standard" parent="ThemeOverlay.AppCompat.Light"/>
+
+  <!-- Text appearance in tab layout -->
+  <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+    <item name="textAllCaps">false</item>
+    <item name="android:textSize">@dimen/text_small</item>
+  </style>
+
+  <!-- Standard CardView theme -->
+  <style name="CardView.Standard" parent="CardView">
+    <item name="cardCornerRadius">@dimen/card_standard_radius</item>
+    <item name="cardElevation">@dimen/card_elevation</item>
+    <item name="android:focusable">true</item>
+    <item name="android:clickable">true</item>
+    <item name="android:foreground">?attr/selectableItemBackground</item>
+    <item name="cardBackgroundColor">@color/colorAccent</item>
+  </style>
+
+  <!-- CardView theme for main actions -->
+  <style name="CardView.Inner" parent="CardView.Standard">
+    <item name="cardCornerRadius">@dimen/card_inner_radius</item>
+    <item name="cardBackgroundColor">@color/windowBackground</item>
+  </style>
+
+  <!-- Inner CardView theme for stroke -->
+  <style name="CardView.Rounded" parent="CardView.Standard">
+    <item name="cardCornerRadius">@dimen/card_large_radius</item>
+  </style>
+
+  <style name="CardView.Flat" parent="CardView.Standard">
+    <item name="cardCornerRadius">0dp</item>
+    <item name="cardElevation">0dp</item>
+    <item name="cardBackgroundColor">@android:color/transparent</item>
+  </style>
+
+  <!-- Standard TextView theme -->
+  <style name="TextView.Standard" parent="android:Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">2</item>
+    <item name="android:textColor">@android:color/black</item>
+    <item name="android:textSize">@dimen/text_standard</item>
+  </style>
+
+  <style name="TextView.Bold" parent="TextView.Standard">
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <!-- Themes for DatePickerDialog and TimePickerDialog -->
+  <!-- Standard theme -->
+  <style name="MaterialPickerTheme" parent="Theme.AppCompat.Light.Dialog">
+    <item name="dialogCornerRadius">@dimen/card_standard_radius</item>
+  </style>
+
+  <!-- Themes by colors -->
+  <style name="DialogPicker_RED_Theme" parent="MaterialPickerTheme">
+    <item name="colorAccent">@color/RED</item>
+  </style>
+
+  <style name="DialogPicker_ORANGE_Theme" parent="MaterialPickerTheme">
+    <item name="colorAccent">@color/ORANGE</item>
+  </style>
+
+  <style name="DialogPicker_TEAL_Theme" parent="MaterialPickerTheme">
+    <item name="colorAccent">@color/TEAL</item>
+  </style>
+
+  <style name="DialogPicker_BLUE_GRAY_Theme" parent="MaterialPickerTheme">
+    <item name="colorAccent">@color/BLUE_GRAY</item>
+  </style>
+
+  <style name="DialogPicker_CYAN_Theme" parent="MaterialPickerTheme">
+    <item name="colorAccent">@color/CYAN</item>
+  </style>
+
+  <style name="DialogPicker_BROWN_Theme" parent="MaterialPickerTheme">
+    <item name="colorAccent">@color/BROWN</item>
+  </style>
+
+  <style name="DialogPicker_BLUE_Theme" parent="MaterialPickerTheme">
+    <item name="colorAccent">@color/BLUE</item>
+  </style>
+
+  <style name="DialogPicker_PURPLE_Theme" parent="MaterialPickerTheme">
+    <item name="colorAccent">@color/PURPLE</item>
+  </style>
+
+  <style name="DialogPicker_PINK_Theme" parent="MaterialPickerTheme">
+    <item name="colorAccent">@color/PINK</item>
+  </style>
+
+  <style name="DialogPicker_GREEN_Theme" parent="MaterialPickerTheme">
+    <item name="colorAccent">@color/GREEN</item>
+  </style>
+
+</resources>

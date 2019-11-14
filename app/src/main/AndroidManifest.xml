@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.arsvechkarev.frest">
+
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:roundIcon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:name=".additional.App"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+
+    <service android:name=".session.TimerService"/>
+
+    <activity
+      android:name=".home.views.MainActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <action android:name="android.intent.action.VIEW"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity
+      android:label="@string/title_projects"
+      android:name=".starttask.StartTaskActivity"
+      android:parentActivityName=".home.views.MainActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:label="@string/title_add_record"
+      android:name=".starttask.AddRecordActivity"
+      android:parentActivityName=".starttask.StartTaskActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:label="@string/title_new_project"
+      android:name=".starttask.newproject.NewProjectActivity"
+      android:parentActivityName=".starttask.StartTaskActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"/>
+    <activity
+      android:label="@string/title_reports"
+      android:name=".reports.ReportsActivity"
+      android:parentActivityName=".home.views.MainActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.Reports"/>
+    <activity
+      android:name=".reports.byproject.SpecProjectReportsActivity"
+      android:parentActivityName=".reports.ReportsActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.StandardTextStyle"/>
+    <activity
+      android:label="@string/title_about"
+      android:name=".other.AboutActivity"
+      android:parentActivityName=".home.views.MainActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.DefaultTextStyle"/>
+  </application>
+
+</manifest>

@@ -1,0 +1,56 @@
+<resources>
+  <!-- Default margins for views -->
+  <dimen name="xx_small_margin">2dp</dimen>
+  <dimen name="x_small_margin">4dp</dimen>
+  <dimen name="small_margin">8dp</dimen>
+  <dimen name="medium_margin">12dp</dimen>
+  <dimen name="standard_margin">16dp</dimen>
+  <dimen name="large_margin">24dp</dimen>
+  <dimen name="x_large_margin">32dp</dimen>
+  <dimen name="xx_large_margin">40dp</dimen>
+
+  <!-- Sizes for text -->
+  <dimen name="text_small">16sp</dimen>
+  <dimen name="text_standard">18sp</dimen>
+  <dimen name="text_large">20sp</dimen>
+  <dimen name="text_x_large">22sp</dimen>
+  <dimen name="text_xx_large">24sp</dimen>
+  <dimen name="text_logo">33sp</dimen>
+
+  <!-- Values for CardViews -->
+  <dimen name="card_inner_radius">6dp</dimen>
+  <dimen name="card_standard_radius">8dp</dimen>
+  <dimen name="card_large_radius">24dp</dimen>
+  <dimen name="card_inner_content_padding">8dp</dimen>
+  <dimen name="card_content_padding">10dp</dimen>
+  <dimen name="card_radius_diff">2dp</dimen>
+  <dimen name="card_elevation">4dp</dimen>
+
+  <!-- ImageView sizes -->
+  <dimen name="image_standard_size">24dp</dimen>
+  <dimen name="play_image_size">28dp</dimen>
+
+  <!-- Sizes for layout_current_session images -->
+  <dimen name="small_circle_size">32dp</dimen>
+  <dimen name="standard_circle_size">40dp</dimen>
+  <dimen name="large_circle_size">50dp</dimen>
+
+  <!-- Current session layout values  -->
+  <dimen name="layout_current_session_corners_radius">8dp</dimen>
+  <dimen name="layout_current_session_stroke">3dp</dimen>
+
+  <!-- Edit text values -->
+  <dimen name="edit_text_corners_radius">8dp</dimen>
+  <dimen name="edit_text_stroke_width">2dp</dimen>
+
+  <!-- Other -->
+  <dimen name="divider_height">1dp</dimen>
+  <dimen name="stroke_size">3dp</dimen>
+  <dimen name="radius_small">4dp</dimen>
+  <dimen name="task_margin_top">6dp</dimen>
+  <dimen name="dialog_corners_radius">8dp</dimen>
+  <dimen name="drawer_logo_size">60dp</dimen>
+  <dimen name="recycler_bottom_padding">80dp</dimen>
+  <dimen name="stub_image_size">125dp</dimen>
+  <dimen name="pie_chart_size">260dp</dimen>
+</resources>

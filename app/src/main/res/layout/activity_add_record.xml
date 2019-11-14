@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <TextView
+    android:id="@+id/textProjectName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:textAlignment="center"
+    android:textSize="@dimen/text_xx_large"
+    app:layout_constraintBottom_toTopOf="@+id/guideline1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/divider_height"
+    android:background="@color/dividerColor"
+    android:layout_marginStart="@dimen/medium_margin"
+    android:layout_marginEnd="@dimen/medium_margin"
+    app:layout_constraintTop_toBottomOf="@id/guideline1"/>
+
+  <RelativeLayout
+    android:id="@+id/layoutDuration"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:onClick="onDurationClick"
+    app:layout_constraintBottom_toTopOf="@id/guideline2"
+    app:layout_constraintTop_toBottomOf="@id/guideline1">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/large_margin"
+      android:layout_alignParentStart="true"
+      android:layout_centerInParent="true"
+      android:text="@string/text_duration"/>
+
+    <TextView
+      android:id="@+id/textDuration"
+      android:textStyle="normal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/large_margin"
+      android:layout_alignParentEnd="true"
+      android:layout_centerInParent="true"
+      android:padding="@dimen/standard_margin"/>
+
+  </RelativeLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/divider_height"
+    android:layout_marginStart="@dimen/medium_margin"
+    android:layout_marginEnd="@dimen/medium_margin"
+    android:background="@color/dividerColor"
+    app:layout_constraintTop_toBottomOf="@id/guideline2"/>
+
+  <RelativeLayout
+    android:id="@+id/layoutDate"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:onClick="onDateClick"
+    app:layout_constraintBottom_toTopOf="@id/guideline3"
+    app:layout_constraintTop_toBottomOf="@id/guideline2">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/large_margin"
+      android:layout_alignParentStart="true"
+      android:layout_centerInParent="true"
+      android:text="@string/text_date"/>
+
+    <TextView
+      android:id="@+id/textDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/large_margin"
+      android:layout_alignParentEnd="true"
+      android:layout_centerInParent="true"
+      android:padding="@dimen/standard_margin"/>
+
+  </RelativeLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/divider_height"
+    android:background="@color/dividerColor"
+    android:layout_marginStart="@dimen/medium_margin"
+    android:layout_marginEnd="@dimen/medium_margin"
+    app:layout_constraintBottom_toTopOf="@+id/guideline3"
+    app:layout_constraintTop_toTopOf="@+id/guideline3"/>
+
+  <TextView
+    android:id="@+id/textWarning"
+    android:textStyle="normal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/small_margin"
+    android:layout_gravity="center"
+    android:text="@string/error_zero_duration"
+    android:textColor="@android:color/holo_red_dark"
+    android:textSize="@dimen/text_small"
+    android:visibility="gone"
+    app:layout_constraintBottom_toTopOf="@+id/guideline4"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline3"
+    app:layout_constraintVertical_bias="0.25"/>
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/cardSaveRecord"
+    style="@style/CardView.Rounded"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/small_margin"
+    app:layout_constraintBottom_toTopOf="@+id/guideline4"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline3"
+    app:layout_constraintVertical_bias="0.8">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/medium_margin"
+      android:paddingStart="@dimen/large_margin"
+      android:paddingEnd="@dimen/large_margin"
+      android:onClick="onSaveClick"
+      android:text="@string/action_save"
+      android:textColor="@android:color/white"/>
+
+  </androidx.cardview.widget.CardView>
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.125"/>
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.23"/>
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.335"/>
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.50"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

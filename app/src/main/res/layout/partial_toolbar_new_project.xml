@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/toolbar"
+  android:layout_width="match_parent"
+  android:layout_height="?attr/actionBarSize"
+  android:theme="@style/Toolbar.Standard"
+  app:popupTheme="@style/Toolbar.Standard">
+
+  <TextView
+    android:id="@+id/toolbarTextSaveProject"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/medium_margin"
+    android:layout_gravity="end"
+    android:padding="@dimen/small_margin"
+    android:background="@drawable/text_view_action"
+    android:onClick="onSaveProjectClick"
+    android:text="@string/action_save_uppercase"
+    android:textColor="@color/itemDarkColor"
+    android:textSize="@dimen/text_small"
+    android:visibility="invisible"/>
+
+</androidx.appcompat.widget.Toolbar>

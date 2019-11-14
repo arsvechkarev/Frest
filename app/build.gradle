@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+  signingConfigs {
+    release {
+      Properties properties = new Properties()
+      properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+      def keystorePath = properties.getProperty('keystore.path')
+      def keystorePassword = properties.getProperty('keystore.storePassword')
+      def keystoreKeyAlias = properties.getProperty('keystore.keyAlias')
+      def keystoreKeyPassword = properties.getProperty('keystore.keyPassword')
+
+      storeFile file(keystorePath)
+      storePassword(keystorePassword)
+      keyAlias = keystoreKeyAlias
+      keyPassword(keystoreKeyPassword)
+    }
+  }
+
+  def configs = rootProject.ext
+
+  compileSdkVersion configs.compileSdkVersion
+  defaultConfig {
+    applicationId configs.applicationId
+    minSdkVersion configs.minSdkVersion
+    targetSdkVersion configs.targetSdkVersion
+    versionCode configs.versionCode
+    versionName configs.versionName
+    testInstrumentationRunner configs.testInstrumentationRunner
+    vectorDrawables.useSupportLibrary = configs.useSupportLibraryInVectorDrawables
+  }
+  buildTypes {
+    release {
+      minifyEnabled configs.minifyEnabled
+      shrinkResources configs.shrinkResources
+      proguardFiles(getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro')
+      signingConfig signingConfigs.release
+    }
+  }
+  compileOptions {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  def appDependencies = rootProject.ext.applicationDependencies
+  def testDependencies = rootProject.ext.testDependencies
+
+  implementation appDependencies.kotlin
+  implementation appDependencies.appCompat
+  implementation appDependencies.legacySupport
+  implementation appDependencies.vectorDrawable
+  implementation appDependencies.materialDesign
+  implementation appDependencies.constraintLayout
+
+  implementation appDependencies.recyclerView
+  implementation appDependencies.eventBus
+  implementation appDependencies.mpAndroidChart
+  implementation appDependencies.coroutines
+
+  implementation appDependencies.butterknife
+  annotationProcessor appDependencies.butterknifeCompiler
+  kapt appDependencies.butterknifeCompiler
+
+  implementation appDependencies.timerx
+
+  testImplementation testDependencies.junit
+  testImplementation testDependencies.mockito
+  androidTestImplementation testDependencies.testRunner
+  androidTestImplementation testDependencies.espresso
+}

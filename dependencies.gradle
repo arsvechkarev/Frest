@@ -1,0 +1,49 @@
+ext {
+
+  // Application dependencies
+  kotlin_version = '1.3.41'
+
+  appCompat_version = '1.0.2'
+  materialDesign_version = '1.0.0'
+  legacySupport_version = '1.0.0'
+  vectorDrawable_version = '1.1.0'
+  constraintLayout_version = '1.1.3'
+  recyclerView_version = '1.0.0'
+  coroutines_version = '1.1.1'
+
+  butterknife_version = '10.1.0'
+  mpAndroidChart_version = 'v3.1.0'
+  eventBus_version = '3.1.1'
+
+  timerx_version = '0.7.6'
+
+  applicationDependencies = [
+      kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+      appCompat          : "androidx.appcompat:appcompat:$appCompat_version",
+      materialDesign     : "com.google.android.material:material:$materialDesign_version",
+      legacySupport      : "androidx.legacy:legacy-support-v4:$legacySupport_version",
+      vectorDrawable     : "androidx.vectordrawable:vectordrawable:$vectorDrawable_version",
+      constraintLayout   : "androidx.constraintlayout:constraintlayout:$constraintLayout_version",
+      recyclerView       : "androidx.recyclerview:recyclerview:$recyclerView_version",
+      coroutines         : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version",
+      butterknife        : "com.jakewharton:butterknife:$butterknife_version",
+      butterknifeCompiler: "com.jakewharton:butterknife-compiler:$butterknife_version",
+      mpAndroidChart     : "com.github.PhilJay:MPAndroidChart:$mpAndroidChart_version",
+      eventBus           : "org.greenrobot:eventbus:$eventBus_version",
+      timerx             : "com.arsvechkarev:timerx:$timerx_version"
+  ]
+
+
+  // Test dependencies
+  junit_version = '4.12'
+  mockito_version = '2.21.0'
+  testRunner_version = '1.1.0'
+  espresso_version = '3.1.0'
+
+  testDependencies = [
+      junit     : "junit:junit:$junit_version",
+      mockito   : "org.mockito:mockito-core:$mockito_version",
+      testRunner: "androidx.test:runner:$testRunner_version",
+      espresso  : "androidx.test.espresso:espresso-core:$espresso_version"
+  ]
+}

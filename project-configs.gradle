@@ -1,0 +1,16 @@
+ext {
+
+  // Application configs
+  compileSdkVersion = 28
+  applicationId = 'com.arsvechkarev.frest'
+  minSdkVersion = 19
+  targetSdkVersion = 28
+  versionCode = 3
+  versionName = '0.5.1'
+  testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
+  useSupportLibraryInVectorDrawables = true
+
+  minifyEnabled = true
+  shrinkResources = true
+
+}

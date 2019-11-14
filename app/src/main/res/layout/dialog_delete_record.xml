@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center"
+  android:background="@drawable/dialog_rounded_bg"
+  android:gravity="center"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/large_margin"
+    android:gravity="center">
+
+    <TextView
+      android:id="@+id/text_task_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:maxEms="7"
+      android:maxLines="1"
+      android:textAlignment="center"
+      android:textSize="@dimen/text_xx_large"/>
+
+    <TextView
+      android:id="@+id/text_task_duration"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/large_margin"
+      android:layout_gravity="center"
+      android:textAlignment="center"
+      android:textSize="@dimen/text_xx_large"/>
+
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/divider_height"
+    android:layout_marginTop="@dimen/standard_margin"
+    android:layout_marginStart="@dimen/large_margin"
+    android:layout_marginEnd="@dimen/large_margin"
+    android:background="@color/dividerColor"/>
+
+  <TextView
+    android:id="@+id/text_delete_task"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/small_margin"
+    android:layout_marginBottom="@dimen/medium_margin"
+    android:padding="@dimen/small_margin"
+    android:paddingStart="@dimen/large_margin"
+    android:paddingEnd="@dimen/large_margin"
+    android:background="@drawable/text_view_action"
+    android:text="@string/action_delete_record"
+    android:textAlignment="center"
+    android:textSize="@dimen/text_large"/>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <include
+    android:id="@+id/noProjectsStub"
+    layout="@layout/stub_template"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:visibility="gone"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerProjects"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/recycler_bottom_padding"
+    android:clipToPadding="false"
+    android:scrollbars="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/cardNewProject"
+    style="@style/CardView.Rounded"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/standard_margin"
+    android:layout_gravity="bottom|center">
+
+    <TextView
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:padding="@dimen/medium_margin"
+      android:drawablePadding="@dimen/small_margin"
+      android:drawableStart="@drawable/ic_add"
+      android:text="@string/action_new_project"
+      android:textColor="@android:color/white"/>
+
+  </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

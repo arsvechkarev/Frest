@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- Base application theme -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:statusBarColor">@color/colorPrimary</item>
+    <item name="android:textViewStyle">@style/TextView.Bold</item>
+    <item name="android:windowLightStatusBar">true</item>
+    <item name="actionBarTheme">@style/Toolbar.Standard</item>
+  </style>
+
+  <!-- AppTheme without action bar -->
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="android:statusBarColor">@color/colorPrimary</item>
+    <item name="android:textViewStyle">@style/TextView.Bold</item>
+    <item name="android:windowLightStatusBar">true</item>
+  </style>
+
+</resources>
