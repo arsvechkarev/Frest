@@ -71,18 +71,15 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener,
     }
   }
   
-  /** @see ActivityActionsListener.startActivityForResult */
   override fun startActivityForResult() {
     val intent = Intent(this, StartTaskActivity::class.java)
     startActivityForResult(intent, Request.MAIN)
   }
   
-  /** @see ActivityActionsListener.startSessionService */
   override fun startSessionService(intentService: Intent) {
     startService(intentService)
   }
   
-  /** @see ActivityActionsListener.stopSessionService */
   override fun stopSessionService(serviceIntent: Intent) {
     stopService(serviceIntent)
   }
