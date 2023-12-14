@@ -1,3 +1,5 @@
+# ARCHIVED: This is my first big pet project, but it is no longer maintained, it is here just for history ;)
+
 # Frest
 A simple time tracker for Android. Allows you to create projects, track them, and watch your statistics
 
